@@ -23,8 +23,7 @@ jobs:
           access_token: ${{ github.token }}
 
   twister-build-prep:
-
-    runs-on: zephyr_runner
+    runs-on: ubuntu-latest
     needs: twister-build-cleanup
     container:
       image: ghcr.io/zephyrproject-rtos/zephyr-build:latest
