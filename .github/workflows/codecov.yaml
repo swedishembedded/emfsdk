@@ -82,7 +82,7 @@ jobs:
 
       - name: Run Tests with Twister (Push)
         run: |
-          export ZEPHYR_BASE=${PWD}
+          export ZEPHYR_BASE=$(west topdir)/zephyr/
           export ZEPHYR_TOOLCHAIN_VARIANT=zephyr
           mkdir -p coverage/reports
           ./scripts/twister -N -v --filter runnable -p ${{ matrix.platform }} --coverage -T tests

@@ -64,7 +64,7 @@ jobs:
       env:
         BASE_REF: ${{ github.base_ref }}
       run: |
-        export ZEPHYR_BASE=$PWD
+        export ZEPHYR_BASE=$(west topdir)/zephyr/
         # debug
         ls -la
         git log  --pretty=oneline | head -n 10
