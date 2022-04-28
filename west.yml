@@ -17,6 +17,7 @@ manifest:
     - name: zephyr
       remote: swedishembedded
       revision: master
+      import: true
     - name: CMock
       path: test/cmock
       revision: master
