@@ -69,6 +69,7 @@ jobs:
     - name: west setup
       run: |
         west init -l .
+        west update
 
     - name: build-docs
       run: |
