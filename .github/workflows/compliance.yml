@@ -60,7 +60,6 @@ jobs:
         west update 2>&1 1> west.update.log || west update 2>&1 1> west.update2.log
 
     - name: Run Compliance Tests
-      continue-on-error: true
       id: compliance
       env:
         BASE_REF: ${{ github.base_ref }}
@@ -73,7 +72,6 @@ jobs:
 
     - name: upload-results
       uses: actions/upload-artifact@master
-      continue-on-error: True
       with:
         name: compliance.xml
         path: compliance.xml

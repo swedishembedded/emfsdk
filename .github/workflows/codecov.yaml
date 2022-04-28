@@ -81,7 +81,6 @@ jobs:
           ccache -M 10G -s
 
       - name: Run Tests with Twister (Push)
-        continue-on-error: true
         run: |
           export ZEPHYR_BASE=${PWD}
           export ZEPHYR_TOOLCHAIN_VARIANT=zephyr

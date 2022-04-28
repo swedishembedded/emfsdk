@@ -36,7 +36,6 @@ jobs:
 
     - name: upload-stats
       uses: actions/upload-artifact@master
-      continue-on-error: True
       with:
         name: ${{ env.OUTPUT_FILE_NAME }}
         path: ${{ env.OUTPUT_FILE_NAME }}
