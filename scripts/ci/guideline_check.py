@@ -8,9 +8,6 @@ import argparse
 import re
 from unidiff import PatchSet
 
-if "ZEPHYR_BASE" not in os.environ:
-    exit("$ZEPHYR_BASE environment variable undefined.")
-
 repository_path = os.environ['PWD']
 
 sh_special_args = {
