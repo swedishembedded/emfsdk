@@ -42,6 +42,7 @@ jobs:
     - name: west setup
       run: |
         west init -l .
+        west update
         source $(west topdir)/zephyr/zephyr-env.sh
 
     - name: Run Coding Guildeines Checks
