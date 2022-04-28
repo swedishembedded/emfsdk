@@ -50,6 +50,7 @@ jobs:
       env:
         BASE_REF: ${{ github.base_ref }}
       run: |
+        source $(west topdir)/zephyr/zephyr-env.sh
         git config --global user.email "actions@zephyrproject.org"
         git config --global user.name "Github Actions"
         git remote -v
