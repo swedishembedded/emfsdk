@@ -11,7 +11,7 @@ from unidiff import PatchSet
 if "ZEPHYR_BASE" not in os.environ:
     exit("$ZEPHYR_BASE environment variable undefined.")
 
-repository_path = os.environ['ZEPHYR_BASE']
+repository_path = os.environ['PWD']
 
 sh_special_args = {
     '_tty_out': False,
