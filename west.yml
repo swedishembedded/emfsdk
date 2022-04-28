@@ -1,0 +1,28 @@
+# Copyright (c) 2022 Martin Schröder
+# SPDX-License-Identifier: Apache-2.0
+
+manifest:
+  self:
+    path: emfsdk
+
+  remotes:
+    - name: zephyrproject-rtos
+      url-base: https://github.com/zephyrproject-rtos
+    - name: throwtheswitch
+      url-base: https://github.com/ThrowTheSwitch
+    - name: swedishembedded
+      url-base: https://github.com/swedishembedded
+
+  projects:
+    - name: zephyr
+      remote: swedishembedded
+      revision: master
+      import: true
+    - name: CMock
+      path: test/cmock
+      revision: master
+      remote: throwtheswitch
+    - name: Unity
+      path: test/cmock/vendor/unity
+      revision: master
+      remote: throwtheswitch
