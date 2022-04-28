@@ -69,7 +69,7 @@ jobs:
     - name: west setup
       run: |
         west init -l .
-        west update
+        source $(west topdir)/zephyr/zephyr-env.sh
 
     - name: build-docs
       run: |
@@ -148,7 +148,7 @@ jobs:
     - name: west setup
       run: |
         west init -l .
-        west update
+        source $(west topdir)/zephyr/zephyr-env.sh
 
     - name: build-docs
       run: |
