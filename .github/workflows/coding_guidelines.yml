@@ -32,25 +32,11 @@ jobs:
         wget https://launchpad.net/~npalix/+archive/ubuntu/coccinelle/+files/coccinelle_1.0.8~20.04npalix1_amd64.deb
         sudo dpkg -i coccinelle_1.0.8~20.04npalix1_amd64.deb
 
-    - name: install-pip
-      run: |
-        sudo pip3 install -U setuptools wheel pip
-        pip3 install -r scripts/requirements-doc.txt
-        pip3 install west
-        pip3 install cmake
-
-    - name: west setup
-      run: |
-        west init -l .
-        west update
-        source $(west topdir)/zephyr/zephyr-env.sh
-
     - name: Run Coding Guildeines Checks
       id: coding_guidelines
       env:
         BASE_REF: ${{ github.base_ref }}
       run: |
-        source $(west topdir)/zephyr/zephyr-env.sh
         git config --global user.email "actions@zephyrproject.org"
         git config --global user.name "Github Actions"
         git remote -v
