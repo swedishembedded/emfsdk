@@ -24,7 +24,6 @@ jobs:
 
       - name: upload-results
         uses: actions/upload-artifact@master
-        continue-on-error: True
         with:
           name: zephyr-${{ steps.get_version.outputs.VERSION }}.spdx
           path: zephyr-${{ steps.get_version.outputs.VERSION }}.spdx

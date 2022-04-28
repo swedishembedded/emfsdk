@@ -74,6 +74,6 @@ jobs:
         env:
           BASE_REF: ${{ github.base_ref }}
         run: |
-          export ZEPHYR_BASE=${PWD}
+          export ZEPHYR_BASE=$(west topdir)/zephyr/
           ./scripts/footprint/track.py  -p scripts/footprint/plan.txt
           aws s3 sync  --quiet footprint_data/ s3://testing.zephyrproject.org/footprint_data/

@@ -58,7 +58,7 @@ jobs:
         env:
           BASE_REF: ${{ github.base_ref }}
         run: |
-          export ZEPHYR_BASE=${PWD}
+          export ZEPHYR_BASE=$(west topdir)/zephyr/
           git config --global user.email "actions@zephyrproject.org"
           git config --global user.name "Github Actions"
           git remote -v

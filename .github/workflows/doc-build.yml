@@ -36,6 +36,9 @@ jobs:
   doc-build-html:
     name: "Documentation Build (HTML)"
     runs-on: ubuntu-latest
+    container:
+      options: '--entrypoint /bin/bash'
+
     timeout-minutes: 30
     concurrency:
       group: doc-build-html-${{ github.ref }}
@@ -69,6 +72,8 @@ jobs:
     - name: west setup
       run: |
         west init -l .
+        west update
+        source $(west topdir)/zephyr/zephyr-env.sh
 
     - name: build-docs
       run: |
@@ -147,6 +152,8 @@ jobs:
     - name: west setup
       run: |
         west init -l .
+        west update
+        source $(west topdir)/zephyr/zephyr-env.sh
 
     - name: build-docs
       run: |
