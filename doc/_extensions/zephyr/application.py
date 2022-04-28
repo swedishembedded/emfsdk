@@ -1,6 +1,6 @@
+# SPDX-License-Identifier: Apache-2.0
 # Copyright (c) 2017 Open Source Foundries Limited.
 #
-# SPDX-License-Identifier: Apache-2.0
 
 '''Sphinx extensions related to managing Zephyr applications.'''
 

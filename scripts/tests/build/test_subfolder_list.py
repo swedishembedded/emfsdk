@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: Apache-2.0
 # Copyright (c) 2020 Intel Corporation
 #
-# SPDX-License-Identifier: Apache-2.0
 
 """tests for subfolder_list.py"""
 

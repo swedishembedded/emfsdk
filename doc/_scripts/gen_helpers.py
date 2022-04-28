@@ -1,5 +1,5 @@
-# Copyright (c) 2020 Nordic Semiconductor ASA
 # SPDX-License-Identifier: Apache-2.0
+# Copyright (c) 2020 Nordic Semiconductor ASA
 
 """
 Helper functions used by gen_kconfig_rest.py and gen_devicetree_rest.py.

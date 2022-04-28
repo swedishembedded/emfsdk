@@ -1,5 +1,5 @@
-# Copyright (c) 2020 Nordic Semiconductor ASA
 # SPDX-License-Identifier: Apache-2.0
+# Copyright (c) 2020 Nordic Semiconductor ASA
 
 """
 Like gen_kconfig_rest.py, but for generating an index of existing
